@@ -4,49 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Networking Acronyms Quiz</title>
-    <style>
-        body {
-            background-color: #ADD8E6;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        #acronymsList {
-            max-height: 200px;
-            overflow-y: auto;
-            background-color: #f8f9fa;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin-top: 20px;
-            display: none;
-        }
-        button {
-            margin: 5px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .question {
-            margin: 20px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Networking Acronyms Quiz</h1>
-        <div id="quizContainer">
-            <input type="text" id="userName" placeholder="Enter your name">
-            <button onclick="startQuiz()">Start Quiz</button>
-        </div>
-        <div id="acronymsList"></div>
-        <button id="clearAcronyms" onclick="clearAcronymsDisplay()" style="display:none;">Clear Acronyms Display</button>
+    <div id="welcomeScreen">
+        <h1>Welcome to the Networking Acronyms Quiz!</h1>
+        <input type="text" id="userName" placeholder="Enter your name" />
+        <button id="startQuiz">Start Quiz</button>
     </div>
-    <script src="quiz.js"></script>
+    <div id="quizContainer" style="display: none;">
+        <div id="question"></div>
+        <input type="text" id="answer" placeholder="Your answer" />
+        <button id="submitAnswer">Submit</button>
+        <div id="feedback"></div>
+        <button id="nextQuestion" style="display: none;">Next</button>
+    </div>
+    <div id="controls" style="display: none;">
+        <button id="quitQuiz">Quit</button>
+        <button id="restartQuiz">Restart</button>
+        <button id="showAcronyms">Show Acronyms</button>
+        <button id="clearAcronyms" style="display: none;">Clear Acronyms</button>
+    </div>
+    <div id="acronymsList" style="display: none;"></div>
+    <div id="quizEnd" style="display: none;"></div>
+    <script src="script.js"></script>
 </body>
 </html>
