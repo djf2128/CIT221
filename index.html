@@ -7,26 +7,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="welcomeScreen">
-        <h1>Welcome to the Networking Acronyms Quiz!</h1>
-        <input type="text" id="userName" placeholder="Enter your name" />
-        <button id="startQuiz">Start Quiz</button>
-    </div>
-    <div id="quizContainer" style="display: none;">
+    <div id="quiz-container">
+        <h1>Networking Acronyms Quiz</h1>
         <div id="question"></div>
-        <input type="text" id="answer" placeholder="Your answer" />
-        <button id="submitAnswer">Submit</button>
-        <div id="feedback"></div>
-        <button id="nextQuestion" style="display: none;">Next</button>
+        <input type="text" id="answer" placeholder="Your answer here...">
+        <button id="submit">Submit</button>
+        <div id="control-buttons">
+            <button id="quit">Quit</button>
+            <button id="restart">Restart</button>
+            <button id="show-acronyms">Show All Acronyms</button>
+            <button id="clear-acronyms">Clear Acronyms</button>
+        </div>
+        <div id="acronyms-list" style="display: none;"></div>
+        <div id="score" style="display: none;"></div>
     </div>
-    <div id="controls" style="display: none;">
-        <button id="quitQuiz">Quit</button>
-        <button id="restartQuiz">Restart</button>
-        <button id="showAcronyms">Show Acronyms</button>
-        <button id="clearAcronyms" style="display: none;">Clear Acronyms</button>
-    </div>
-    <div id="acronymsList" style="display: none;"></div>
-    <div id="quizEnd" style="display: none;"></div>
     <script src="script.js"></script>
 </body>
 </html>
