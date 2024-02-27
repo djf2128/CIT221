@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Networking Acronyms Quiz</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking Acronyms Quiz</title>
+    <style>
+        body {
+            background-color: #ADD8E6;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        #acronymsList {
+            max-height: 200px;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .question {
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-  <h1>Networking Acronyms Quiz</h1>
-  <div id="userInput">
-    <input type="text" id="userName" placeholder="Enter your name" autofocus>
-    <button onclick="startQuiz()">Start Quiz</button>
-  </div>
-  <div id="quiz" style="display:none;">
-    <div id="question"></div>
-    <input type="text" id="answer" placeholder="Your answer">
-    <button onclick="submitAnswer()">Submit</button>
-    <button onclick="quitQuiz()">Quit</button>
-    <button onclick="restartQuiz()">Restart</button>
-    <button onclick="showAcronyms()">Show Acronyms</button>
-  </div>
-  <div id="feedback"></div>
-  <div id="score"></div>
-  <div id="acronymsList" style="display:none;"></div>
-</div>
-<script src="script.js"></script>
+    <div class="container">
+        <h1>Networking Acronyms Quiz</h1>
+        <div id="quizContainer">
+            <input type="text" id="userName" placeholder="Enter your name">
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+        <div id="acronymsList"></div>
+        <button id="clearAcronyms" onclick="clearAcronymsDisplay()" style="display:none;">Clear Acronyms Display</button>
+    </div>
+    <script src="quiz.js"></script>
 </body>
 </html>
