@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Networking Acronyms Quiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>Networking Acronyms Quiz</h1>
+  <div id="userInput">
+    <input type="text" id="userName" placeholder="Enter your name" autofocus>
+    <button onclick="startQuiz()">Start Quiz</button>
+  </div>
+  <div id="quiz" style="display:none;">
+    <div id="question"></div>
+    <input type="text" id="answer" placeholder="Your answer">
+    <button onclick="submitAnswer()">Submit</button>
+    <button onclick="quitQuiz()">Quit</button>
+    <button onclick="restartQuiz()">Restart</button>
+    <button onclick="showAcronyms()">Show Acronyms</button>
+  </div>
+  <div id="feedback"></div>
+  <div id="score"></div>
+  <div id="acronymsList" style="display:none;"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
